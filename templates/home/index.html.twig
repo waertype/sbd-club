@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SBD Powerlifting – Plateforme du club{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>SBD Powerlifting Club</h1>
+        <p class="subtitle">
+            Plateforme officielle de gestion des sportifs, entraînements et compétitions
+        </p>
+    </section>
+
+    <!-- PRESENTATION -->
+    <section class="section">
+        <h2>À propos du club</h2>
+        <p>
+            Le <strong>SBD Powerlifting Club</strong> est un club dédié à la force athlétique,
+            regroupant des sportifs de tous niveaux autour des disciplines principales :
+            <strong>Squat, Bench Press et Deadlift</strong>.
+        </p>
+        <p>
+            Cette plateforme numérique permet de centraliser le suivi des adhérents,
+            des performances, des objectifs sportifs et des compétitions, dans une logique
+            de progression, de sécurité et de performance.
+        </p>
+    </section>
+
+    <!-- OBJECTIFS PLATEFORME -->
+    <section class="section">
+        <h2>Objectifs de la plateforme</h2>
+        <ul>
+            <li>Suivre l’évolution et les performances des sportifs</li>
+            <li>Gérer les entraînements et les objectifs individuels</li>
+            <li>Centraliser les compétitions et les résultats</li>
+            <li>Fournir des statistiques de progression fiables</li>
+            <li>Faciliter la communication entre sportifs et encadrants</li>
+        </ul>
+    </section>
+
+    <!-- ESPACES UTILISATEURS -->
+    <section class="section">
+        <h2>Espaces utilisateurs</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Sportif</h3>
+                <p>
+                    Accès personnel permettant au sportif de consulter ses objectifs,
+                    suivre ses performances, visualiser son indice de progression
+                    et consulter ses résultats en compétition.
+                </p>
+                <a href="/login" class="btn">Accéder à l’espace sportif</a>
+            </div>
+
+            <div class="card">
+                <h3>Entraîneur</h3>
+                <p>
+                    Interface dédiée à l’entraîneur pour gérer les sportifs,
+                    définir les objectifs, suivre les entraînements et analyser
+                    les performances individuelles et collectives.
+                </p>
+                <a href="/login" class="btn">Accéder à l’espace entraîneur</a>
+            </div>
+
+            <div class="card">
+                <h3>Administration</h3>
+                <p>
+                    Espace de gestion globale permettant l’administration du club :
+                    gestion des utilisateurs, des compétitions, des rôles et des données
+                    statistiques globales.
+                </p>
+                <a href="/login" class="btn">Accéder à l’administration</a>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+{% endblock %}
+
