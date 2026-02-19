@@ -30,7 +30,10 @@ final class ObjectifController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->persist($objectif);
+
+            $objectif->setUser($this->getUser());
+
+	    $entityManager->persist($objectif);
             $entityManager->flush();
 
             return $this->redirectToRoute('app_objectif_index', [], Response::HTTP_SEE_OTHER);

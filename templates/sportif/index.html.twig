@@ -1,20 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SportifController!{% endblock %}
+{% block title %}Espace Sportif{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<h1>Bienvenue {{ user.email }}</h1>
 
-    This friendly message is coming from:
+<h2>Mes Objectifs</h2>
+
+{% if objectifs is empty %}
+    <p>Aucun objectif pour le moment.</p>
+{% else %}
     <ul>
-        <li>Your controller at <code>/var/www/sbd-club/backend/src/Controller/SportifController.php</code></li>
-        <li>Your template at <code>/var/www/sbd-club/backend/templates/sportif/index.html.twig</code></li>
+        {% for objectif in objectifs %}
+            <li>
+                <strong>{{ objectif.titre }}</strong><br>
+                {{ objectif.description }}
+            </li>
+        {% endfor %}
     </ul>
-</div>
+{% endif %}
+
 {% endblock %}

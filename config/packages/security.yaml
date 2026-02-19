@@ -41,8 +41,11 @@ security:
 
     # Note: Only the *first* matching rule is applied
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/sportif, roles: ROLE_SPORTIF }
+        - { path: ^/animateur, roles: ROLE_ANIMATEUR }
+        - { path: ^/stats, roles: ROLE_ADMIN }
+
+
 
 when@test:
     security:
